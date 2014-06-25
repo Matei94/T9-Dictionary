@@ -1,0 +1,53 @@
+
+	Autor: Matei Razvan Madalin, 313CA
+		   UPB, Facultatea de Automatica si Calculatoare
+
+
+			**************************
+		    ********  Tema 4  ********
+			*****  Dictionar T9  *****
+			**************************
+			
+			
+		___ Detalii de implementare ___
+		
+		In prima parte a programului se insereaza in trie toate
+	cuvintele date impreuna cu numarul lor de aparitii.
+		In cea de-a doua parte se cauta cuvintele cerute dupa
+	codurile date.
+	
+		* Prima parte a programului:
+		
+		Cuvantul impreuna cu numarul lui de aparitii este reprezentat
+	de structura elem. Cuvitele citite sunt puse in matricea words 
+	iar fiecare structura de tip elem va pointa catre unul dintre aceste
+	cuvinte. Toate cuvintele sunt adaugate in trie. Aceasta operatie
+	calculeaza pentru fiecare litera cifra corespunzatatoare cu functia
+	int POZ(char *), iar la finalul cuvantului se adauga cuvantul 
+	propriu-zis in treap. Adaugarea se face dupa numarul de aparitii,
+	iar daca aceastea sunt egale, dupa ordinea lexicografica.
+	
+		* A doua parte a programului:
+		
+		Pentru un cod citit se executa urmatorii pasi:
+	Pointerul Trie* aux porneste din radacina Trie-ului si pentru
+	fiecare cifra din cod se muta pe "ramura" corespunzatoare.
+	Odata ajuns la finalul cuvantului cauta in trip prima aparitie
+	a cuvantului ce verifica codul dat, sau daca dupa cod exista 
+	"*K", cauta in treap a K-a aparitie a cuvantului ce verifica codul.
+	Aceasta operatie se face cu ajutorul functiei findDescendio(K).
+	
+		* Observatii:
+		
+		Am preferat metoda ce foloseste char* si structura elem in ciuda
+	clasei string si pair din STL deoarece acestea sunt mai rapide.
+		Treap-ul folosit este cel implementat in laboratorul 11 dupa 
+	scheletul pus la dispozitie.
+		In realizarea trie-ului am consultat referinta dupa infoarena.
+	
+		
+		
+		*** Spor la corectat ***
+		
+		
+		
